@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23FF7043' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'><path d='M12 2v8'/><path d='m4.93 10.93 5.66 5.66'/><path d='M2 18h8'/><path d='M20 18h2'/><path d='m19.07 10.93-1.41 1.41'/><circle cx='18' cy='18' r='3'/><circle cx='6' cy='6' r='3'/></svg>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fuse — Connect Incomplete Ideas with the Right People</title>
+    
+    <!-- Instant Synchronous Dark Mode & Brand Accent Detection -->
+    <script>
+      (function() {
+        try {
+          var theme = localStorage.getItem('fuse_theme');
+          var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+          if (theme === 'dark' || (!theme && prefersDark)) {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+
+          var accent = localStorage.getItem('fuse_accent') || 'orange';
+          document.documentElement.setAttribute('data-accent', accent);
+        } catch (e) {}
+      })();
+    </script>
+    <style>
+      html.dark, html.dark body {
+        background-color: #111110 !important;
+        color: #F5F5F0 !important;
+        color-scheme: dark;
+      }
+    </style>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-[#F8F8F5] dark:bg-[#111110] text-[#171717] dark:text-[#F5F5F0] antialiased selection:bg-[#FF7043]/20 selection:text-[#FF7043]">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
